@@ -1,0 +1,117 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 10px;
+	width: 400px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+}
+
+.card-title {
+	margin-bottom: 0;
+}
+
+.footer {
+	background-color: #2c2c2c; /* secondary palette background */
+	color: #b0b0b0; /* secondary palette text */
+	border-top: 1px solid #3c3c3c; /* top edge of palette */
+	font-size: 12px; /* smallest font size */
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+.footer a {
+	color: #ff4081; /* palette accent color */
+	margin: 0 5px;
+}
+
+.footer a:hover {
+	text-decoration: none;
+	color: #ff80ab; /* lighter accent color for hover */
+}
+
+/* Dark theme */
+body.dark-theme {
+	background-color: #212121; /* dark background */
+	color: #e0e0e0; /* clear text */
+}
+
+.dark-theme .card {
+	background-color: #2c2c2c; /* darker card background */
+	border-color: #3c3c3c; /* darker card border */
+}
+
+.dark-theme .form-control,
+.dark-theme .form-control:focus,
+.dark-theme .btn,
+.dark-theme .btn:focus {
+	background-color: #2c2c2c; /* input background and darker button */
+	border-color: #3c3c3c; /* input border and darker button */
+	color: #e0e0e0; /* clear text */
+}
+
+.dark-theme .btn {
+	background-color: #3d5afe; /* button background when not moused over */
+	border-color: #3c3c3c; /* button border */
+	color: #e0e0e0; /* button text */
+}
+
+.dark-theme .btn:hover {
+	background-color: #536dfe; /* button background when moused over */
+	border-color: #3a3b3c; /* button border when moused over */
+}
+
+.card-body .row {
+	padding: 0.25rem 0;
+}
+
+.audio-icon {
+	cursor: pointer;
+	color: #ff4081; /* accent color for icons */
+}
+
+.audio-icon:hover {
+	color: #ff80ab; /* A lighter blue color when you mouse over */
+}
+
+form-control-sm textarea {
+	font-size: 0.875rem; /* adjust as needed */
+}
+
+textarea::-webkit-scrollbar {
+	width: 0; /* For WebKit: Chrome, Safari, etc. */
+}
+
+textarea {
+	scrollbar-width: none; /* For Firefox */
+}
+/* Styles for WebKit (Chrome, Safari, etc.) */
+textarea::-webkit-scrollbar {
+	width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+	background-color: #2c2c2c; /* Secondary Palette Background */
+}
+
+textarea::-webkit-scrollbar-thumb {
+	background-color: #3c3c3c; /* Palette Border Color */
+	border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+	background-color: #ff4081; /* Palette Accent Color on Hover */
+}
+
+/* Styles for Firefox */
+textarea {
+	scrollbar-width: thin;
+	scrollbar-color: #3c3c3c #2c2c2c;
+}
+textarea {
+	resize: none; /* Disable resizing functionality */
+}
