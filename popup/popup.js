@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	generateAudioBoxes();
 });
 
+document.getElementById("openInTab").addEventListener("click", function () {
+	chrome.tabs.create({ url: "/popup/popup.html" });
+});
+
 // ==================== DOM Elements Generation ====================
 
 function generateAudioBoxes() {

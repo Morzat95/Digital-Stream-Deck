@@ -24,12 +24,14 @@ body {
 	bottom: 0;
 }
 
-.footer a {
+.footer a,
+.footer i {
 	color: #ff4081; /* palette accent color */
 	margin: 0 5px;
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer i:hover {
 	text-decoration: none;
 	color: #ff80ab; /* lighter accent color for hover */
 }
@@ -114,4 +116,10 @@ textarea {
 }
 textarea {
 	resize: none; /* Disable resizing functionality */
+}
+
+@media screen and (min-width: 600px) {
+	body {
+		width: 100%;
+	}
 }
