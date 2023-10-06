@@ -48,6 +48,7 @@ function playMedia(audioNumber) {
 	const keys = [
 		`audio${audioNumber}`,
 		`video${audioNumber}`,
+		`image${audioNumber}`,
 		`videoUrl${audioNumber}`,
 	];
 
@@ -55,11 +56,14 @@ function playMedia(audioNumber) {
 		const {
 			[keys[0]]: audioData,
 			[keys[1]]: videoData,
-			[keys[2]]: videoUrlData,
+			[keys[2]]: imageData,
+			[keys[3]]: videoUrlData,
 		} = items;
 
 		if (videoData) {
 			injectAndPlayLocalVideo(videoData);
+		} else if (imageData) {
+			injectAndPlayLocalImage(imageData);
 		} else if (videoUrlData) {
 			injectAndPlayVideoFromUrl(videoUrlData);
 		} else if (audioData) {
@@ -70,12 +74,7 @@ function playMedia(audioNumber) {
 
 function injectAndPlayLocalVideo(videoData) {
 	// Create a container for the video
-	const videoContainer = document.createElement("div");
-	videoContainer.style.position = "fixed";
-	videoContainer.style.top = "50%";
-	videoContainer.style.left = "50%";
-	videoContainer.style.transform = "translate(-50%, -50%)";
-	videoContainer.style.zIndex = "9999";
+	const videoContainer = createMediaContainer();
 
 	// Create the video element
 	const videoElement = document.createElement("video");
@@ -93,16 +92,31 @@ function injectAndPlayLocalVideo(videoData) {
 	document.body.appendChild(videoContainer);
 }
 
+function injectAndPlayLocalImage(imageData) {
+	// Create a container for the image
+	const imageContainer = createMediaContainer();
+
+	// Create the image element
+	const imageElement = document.createElement("img");
+	imageElement.src = imageData;
+	imageElement.controls = true;
+	imageElement.autoplay = true;
+
+	// Removes image after X milliseconds
+	setTimeout(() => {
+		imageContainer.remove();
+	}, 5000);
+
+	// Add the image to the container and then to the body of the page
+	imageContainer.appendChild(imageElement);
+	document.body.appendChild(imageContainer);
+}
+
 function injectAndPlayVideoFromUrl(videoData) {
 	const videoId = getYoutubeVideoId(videoData);
 	if (videoId) {
 		// Create a container for the video
-		const videoContainer = document.createElement("div");
-		videoContainer.style.position = "fixed";
-		videoContainer.style.top = "50%";
-		videoContainer.style.left = "50%";
-		videoContainer.style.transform = "translate(-50%, -50%)";
-		videoContainer.style.zIndex = "9999";
+		const videoContainer = createMediaContainer();
 
 		// Create the close button
 		const closeButton = document.createElement("div");
@@ -136,6 +150,16 @@ function injectAndPlayVideoFromUrl(videoData) {
 		videoContainer.appendChild(iframe);
 		document.body.appendChild(videoContainer);
 	}
+}
+
+function createMediaContainer() {
+	const container = document.createElement("div");
+	container.style.position = "fixed";
+	container.style.top = "50%";
+	container.style.left = "50%";
+	container.style.transform = "translate(-50%, -50%)";
+	container.style.zIndex = "9999";
+	return container;
 }
 
 function getYoutubeVideoId(url) {

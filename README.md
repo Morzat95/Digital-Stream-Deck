@@ -1,18 +1,20 @@
 # Digital Stream Deck Chrome Extension
 
-A browser extension for Google Chrome that offers a virtual deck for both audio and video content. Designed especially for streamers, users can effortlessly upload, configure, and play any multimedia content, from sound effects to song fragments to videos, all using simple keyboard shortcuts. Enhance your streaming experience with the Digital Stream Deck.
+A browser extension for Google Chrome that offers a virtual multimedia deck. Designed especially for streamers, users can effortlessly upload, configure, and play a wide range of multimedia content—from sound effects, song fragments, videos, to images—all using simple keyboard shortcuts. The Digital Stream Deck is your all-in-one solution for an immersive streaming experience.
 
 ## Features
 
-- **Upload & Configure**: Quickly load any audio or video content into the extension. Bind them to intuitive keyboard combinations, such as `Shift + 1`.
+- **Upload & Configure**: Effortlessly load any audio, video, or image content into the extension. Bind them to intuitive keyboard combinations, such as Shift + 1.
 
 - **Universal Play**: Whether streaming, casually browsing, or watching videos on sites like Twitter, YouTube, or any other, play your configured multimedia seamlessly.
 
-- **Personalized Descriptions**: Attach unique descriptions to each audio for easy identification and recall.
+- **Personalized Descriptions**: Attach unique descriptions to each multimedia file for easy identification and recall.
 
 - **Sleek Dark Mode**: An elegant, user-friendly dark themed interface, ensuring minimal visual disruptions during streaming.
 
 - **Embedded Video Player**: Inject videos into your current tab, sourced either from local storage or via YouTube URLs.
+
+- **Image Injection**: Instantly showcase images in the center of your current tab, offering a quick visual break or highlight.
 
 ## Installation
 
@@ -29,9 +31,9 @@ Ready to enhance your streaming experience? [Get Digital Stream Deck on the Chro
 ## Usage
 
 1. After installation, click on the Digital Stream Deck extension icon.
-2. Use the intuitive interface to load audio or video files and bind them to specific keyboard combinations.
+2. Navigate its intuitive interface to load audio, video, or image files, and then bind them to your preferred keyboard combinations.
 3. Optionally, add custom descriptions for each file for effortless identification.
-4. On any website or streaming platform, use the predetermined keyboard combinations to play your audios or videos on demand!
+4. Across any platform—be it websites or streaming platforms—deploy your multimedia assets on-demand using the set keyboard combinations!
 
 ## Contributing
 
