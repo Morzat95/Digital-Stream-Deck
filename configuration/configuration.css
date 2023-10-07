@@ -1,0 +1,35 @@
+body {
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+	height: 100vh; /* Ensures that the body occupies the entire height of the window */
+	margin: 0; /* Remove any default margin */
+}
+
+.screen-container {
+	position: relative;
+	border: 2px solid #ccc;
+	/* display: flex; */
+	justify-content: center;
+}
+
+.draggable {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 100px;
+	background: rgba(0, 128, 255, 0.5);
+	cursor: move;
+}
+
+.resizable {
+	overflow: hidden;
+	resize: both;
+}
+
+body.dark-theme {
+	background-color: #212121; /* dark background */
+	color: #e0e0e0; /* clear text */
+}
